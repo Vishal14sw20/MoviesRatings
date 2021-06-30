@@ -57,7 +57,7 @@ public class MoviesRatings {
 
         // saving view into file
         // it will be in path output/avg_ratings with name part-something.csv
-        df_finalResult.coalesce(1).write().mode(SaveMode.Overwrite).csv("output/avg_ratings");
+        df_finalResult.coalesce(1).write().option("header","true").mode(SaveMode.Overwrite).csv("output/avg_ratings");
 
         System.out.println("Done");
 
